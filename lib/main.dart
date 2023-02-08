@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pregcare/Homepage.dart';
+import 'package:pregcare/pages/pregcare.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,11 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/" : (context) => Homepage(),
+        "/": (context) => Pregcare(),
       },
     );
   }
 }
-
-
-
