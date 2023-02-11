@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pregcare/mom/m_main.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+import 'package:pregcare/tools/tools_main.dart';
 
 class Pregcare extends StatefulWidget {
   const Pregcare({super.key});
@@ -10,14 +11,15 @@ class Pregcare extends StatefulWidget {
 }
 
 class _PregcareState extends State<Pregcare> {
-  var _currentIndex = 0;
   List pages = [
     MMain(),
     Text("baby"),
     Text("bot"),
-    Text("tools"),
+    MyTools(),
     Text("profile"),
   ];
+
+  var _currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
