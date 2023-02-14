@@ -3,6 +3,8 @@ import 'package:pregcare/mom/m_main.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:pregcare/tools/tools_main.dart';
 
+import '../baby/baby_main.dart';
+
 class Pregcare extends StatefulWidget {
   const Pregcare({super.key});
 
@@ -13,7 +15,7 @@ class Pregcare extends StatefulWidget {
 class _PregcareState extends State<Pregcare> {
   List pages = [
     MMain(),
-    Text("baby"),
+    Baby(),
     Text("bot"),
     MyTools(),
     Text("profile"),
