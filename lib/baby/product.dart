@@ -3,9 +3,7 @@ class Product {
 
   final String title;
 
-  final double cost;
+  final String desc;
 
-  final int reviewCount;
-
-  Product(this.imagePath, this.title, this.cost, this.reviewCount);
+  Product(this.imagePath, this.title, this.desc);
 }
