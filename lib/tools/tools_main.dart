@@ -13,6 +13,7 @@ class _MyToolsState extends State<MyTools> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        // component 1-->Button
         child: Column(
           children: [
             Center(),
@@ -28,7 +29,7 @@ class _MyToolsState extends State<MyTools> {
                   child: Ink.image(
                     image: AssetImage('assets/images/redButton.png'),
                     height: 200,
-                    width: 200,
+                    width: 225,
                     fit: BoxFit.cover,
                     child: Center(
                       child: Text(
@@ -40,103 +41,157 @@ class _MyToolsState extends State<MyTools> {
                 ),
               ),
             ),
-            Container(
-              width: 200, // Container child widget will get this width value
-              height: 200, // Container child widget will get this height value
-              padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-              child: Material(
-                color: Colors.greenAccent[700],
-                elevation: 8,
-                borderRadius: BorderRadius.circular(26),
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: InkWell(
-                  splashColor: Colors.black54,
-                  onTap: () {},
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Center(),
-                      Ink.image(
-                        image: AssetImage('assets/images/location.png'),
-                        height: 100,
-                        width: 200,
-                        fit: BoxFit.cover,
-                      ),
-                      Text(
-                        'Get Location',
-                        style: TextStyle(fontSize: 20, color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Container(
-              width: 200, // Container child widget will get this width value
-              height: 200, // Container child widget will get this height value
-              padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-              child: Material(
-                color: Colors.lightBlueAccent,
-                elevation: 8,
-                borderRadius: BorderRadius.circular(26),
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: InkWell(
-                  splashColor: Colors.black54,
-                  onTap: () {},
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Center(),
-                      Ink.image(
-                        image: AssetImage('assets/images/doctor.png'),
-                        height: 100,
-                        width: 200,
-                        fit: BoxFit.fitHeight,
-                      ),
-                      Center(
-                        child: Text(
-                          'Consult with Doctor',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.white,
+            // ROW 1 (tools)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width:
+                      150, // Container child widget will get this width value
+                  height:
+                      225, // Container child widget will get this height value
+                  padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                  child: Material(
+                    color: Colors.greenAccent[700],
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(26),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: InkWell(
+                      splashColor: Colors.black54,
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Center(),
+                          Ink.image(
+                            image: AssetImage('assets/images/location.png'),
+                            height: 100,
+                            width: 200,
+                            fit: BoxFit.cover,
                           ),
-                        ),
+                          Text(
+                            'Get Location',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20, color: Colors.white),
+                          ),
+                        ],
                       ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                Container(
+                  width:
+                      150, // Container child widget will get this width value
+                  height:
+                      225, // Container child widget will get this height value
+                  padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                  child: Material(
+                    color: Colors.lightBlueAccent,
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(26),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: InkWell(
+                      splashColor: Colors.black54,
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Center(),
+                          Ink.image(
+                            image: AssetImage('assets/images/doctor.png'),
+                            height: 100,
+                            width: 200,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          Center(
+                            child: Text(
+                              'Consult with Doctor',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Container(
-              width: 200, // Container child widget will get this width value
-              height: 200, // Container child widget will get this height value
-              padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
-              child: Material(
-                color: Colors.amber[600],
-                elevation: 8,
-                borderRadius: BorderRadius.circular(26),
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                child: InkWell(
-                  splashColor: Colors.black54,
-                  onTap: () {},
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Center(),
-                      Ink.image(
-                        image: AssetImage('assets/images/calender.png'),
-                        height: 100,
-                        width: 200,
-                        fit: BoxFit.fitHeight,
+            // ROW 2 (tools)
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  width:
+                      150, // Container child widget will get this width value
+                  height:
+                      225, // Container child widget will get this height value
+                  padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                  child: Material(
+                    color: Colors.amber[600],
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(26),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: InkWell(
+                      splashColor: Colors.black54,
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Center(),
+                          Ink.image(
+                            image: AssetImage('assets/images/calender.png'),
+                            height: 100,
+                            width: 200,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          Text(
+                            'Important Dates',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20, color: Colors.black),
+                          ),
+                        ],
                       ),
-                      Text(
-                        'Important Dates',
-                        style: TextStyle(fontSize: 20, color: Colors.black),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
-              ),
+                Container(
+                  width:
+                      150, // Container child widget will get this width value
+                  height:
+                      225, // Container child widget will get this height value
+                  padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+                  child: Material(
+                    color: Colors.amber[600],
+                    elevation: 8,
+                    borderRadius: BorderRadius.circular(26),
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    child: InkWell(
+                      splashColor: Colors.black54,
+                      onTap: () {},
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Ink.image(
+                            image: AssetImage('assets/images/calender.png'),
+                            height: 100,
+                            width: 200,
+                            fit: BoxFit.fitHeight,
+                          ),
+                          Text(
+                            'Replace New Tools',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20, color: Colors.black),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
