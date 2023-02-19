@@ -45,7 +45,9 @@ dependencies:
   flutter_inner_drawer: ^1.0.0+1
   card_swiper : ^2.0.1
   background_app_bar: ^2.0.1
-  google_fonts: ^3.0.1
+  google_fonts: ^4.0.3
+  contained_tab_bar_view: ^0.8.0
+  scroll_snap_list: ^0.9.1
 
 dev_dependencies:
   flutter_test:
