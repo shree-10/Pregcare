@@ -9,35 +9,35 @@ class MMain extends StatelessWidget {
   List cards = [
     MomTileCrad(
         title_text: "Meal Plan",
-        image_url: "assets/images/meal.png",
+        image_url: "assets/images/m_meal.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Exercise",
-        image_url: "assets/images/exercise.png",
+        image_url: "assets/images/m_exercise.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Weight",
-        image_url: "assets/images/weight.png",
+        image_url: "assets/images/m_weight.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Calender",
-        image_url: "assets/images/calender.png",
+        image_url: "assets/images/m_calender.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Store",
-        image_url: "assets/images/store.png",
+        image_url: "assets/images/m_store.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Articles",
-        image_url: "assets/images/articles.png",
+        image_url: "assets/images/m_articles.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Contraction",
-        image_url: "assets/images/contraction.png",
+        image_url: "assets/images/m_contraction.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Experiances",
-        image_url: "assets/images/experience.png",
+        image_url: "assets/images/m_experience.png",
         openUrl: "hello"),
   ];
 
