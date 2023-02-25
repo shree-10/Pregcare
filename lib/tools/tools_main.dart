@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyTools extends StatefulWidget {
   const MyTools({super.key});
@@ -12,8 +12,21 @@ class _MyToolsState extends State<MyTools> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 238, 238, 238),
+      appBar: AppBar(
+        backgroundColor: Colors.pink,
+        // center might be temporarily here
+        // You should remove center if you want to add the drawer in this page
+        title: Center(
+          child: Text(
+            "Preg Care",
+            style: GoogleFonts.dancingScript(
+                fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
-        // component 1-->Button
+        // component 1--> SOS Button
         child: Column(
           children: [
             Center(),
