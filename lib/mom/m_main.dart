@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pregcare/utils/routes.dart';
 
 import '../widgets/cards.dart';
 
@@ -10,7 +11,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Meal Plan",
         image_url: "assets/images/m_meal.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momWeightRoute),
     MomTileCrad(
         title_text: "Exercise",
         image_url: "assets/images/m_exercise.png",
@@ -18,7 +19,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Weight",
         image_url: "assets/images/m_weight.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momWeightRoute),
     MomTileCrad(
         title_text: "Calender",
         image_url: "assets/images/m_calender.png",
