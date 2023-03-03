@@ -18,7 +18,7 @@ class MomTileCrad extends StatelessWidget {
       // color: Color.fromARGB(255, 199, 185, 249),
       child: InkWell(
         onTap: (() {
-          print("hello");
+          Navigator.pushNamed(context, openUrl);
         }),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
