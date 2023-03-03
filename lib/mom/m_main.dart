@@ -78,7 +78,7 @@ class MMain extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  "Weeks-80",
+                  "Weeks-40",
                   style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(

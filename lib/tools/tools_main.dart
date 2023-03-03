@@ -178,7 +178,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.amber[600],
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -188,14 +188,18 @@ class _MyToolsState extends State<MyTools> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          SizedBox(
+                            height: 20,),
                           Ink.image(
-                            image: AssetImage('assets/images/calender.png'),
+                            image: AssetImage('assets/images/smart_watch.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.fitHeight,
                           ),
+                          SizedBox(
+                            height: 30,),
                           Text(
-                            'Replace New Tools',
+                            'Smart Watch',
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 20, color: Colors.black),
                           ),
