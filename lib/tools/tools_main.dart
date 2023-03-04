@@ -65,7 +65,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.greenAccent[700],
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -74,18 +74,21 @@ class _MyToolsState extends State<MyTools> {
                       onTap: () {},
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [
+                        children: [SizedBox(
+                            height: 20,),
                           Center(),
                           Ink.image(
-                            image: AssetImage('assets/images/location.png'),
+                            image: AssetImage('assets/images/location_t.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.cover,
                           ),
+                          SizedBox(
+                            height: 20,),
                           Text(
                             'Get Location',
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 20, color: Colors.black),
                           ),
                         ],
                       ),
@@ -99,7 +102,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.lightBlueAccent,
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -108,21 +111,23 @@ class _MyToolsState extends State<MyTools> {
                       onTap: () {},
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [
+                        children: [SizedBox(
+                            height: 20,),
                           Center(),
                           Ink.image(
-                            image: AssetImage('assets/images/doctor.png'),
+                            image: AssetImage('assets/images/doctor1.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.fitHeight,
                           ),
                           Center(
-                            child: Text(
+                            child: 
+                            Text(
                               'Consult with Doctor',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
-                                color: Colors.white,
+                                color: Colors.black,
                               ),
                             ),
                           ),
@@ -144,7 +149,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.amber[600],
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -153,14 +158,17 @@ class _MyToolsState extends State<MyTools> {
                       onTap: () {},
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [
+                        children: [SizedBox(
+                            height: 20,),
                           Center(),
                           Ink.image(
-                            image: AssetImage('assets/images/calender.png'),
+                            image: AssetImage('assets/images/m_calender.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.fitHeight,
                           ),
+                          SizedBox(
+                            height: 20,),
                           Text(
                             'Important Dates',
                             textAlign: TextAlign.center,
@@ -197,7 +205,7 @@ class _MyToolsState extends State<MyTools> {
                             fit: BoxFit.fitHeight,
                           ),
                           SizedBox(
-                            height: 30,),
+                            height: 20,),
                           Text(
                             'Smart Watch',
                             textAlign: TextAlign.center,
