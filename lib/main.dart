@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
+import 'mom/m_articles.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
+        PregcareRoutes().momArticleRoute: (context) => ArticlesPage()
       },
     );
   }
