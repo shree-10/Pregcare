@@ -4,6 +4,7 @@ import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/mom/m_store.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
+import 'mom/m_articles.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
@@ -29,7 +30,11 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
+<<<<<<< HEAD
         PregcareRoutes().momStoreRoute: (context) => Mstore(),
+=======
+        PregcareRoutes().momArticleRoute: (context) => ArticlesPage()
+>>>>>>> 45218c9ae46f68a738f812c0bf6ed9876a067956
       },
     );
   }

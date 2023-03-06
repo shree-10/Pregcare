@@ -3,15 +3,15 @@ import 'package:pregcare/baby/product.dart';
 import 'package:scroll_snap_list/scroll_snap_list.dart';
 
 class bbirth extends StatefulWidget {
-  const bbirth({super.key});
+  const bbirth({Key? key}) : super(key: key);
 
   @override
-  _bbirth createState() => _bbirth();
+  _bbirthState createState() => _bbirthState();
 }
 
-class _bbirth extends State<bbirth> {
+class _bbirthState extends State<bbirth> {
 
-  List<Product> productList = [
+  final List<Product> productList = [
     Product('assets/images/week_2.png', '2 Weeks Pregnent',
         "Ovulation may happen about two weeks after your last period began. If egg meets sperm, you're on your way to being pregnant."),
     Product('assets/images/week_3.png', '3 Weeks Pregnent',
@@ -38,22 +38,27 @@ class _bbirth extends State<bbirth> {
         "At 13 weeks pregnant, you're in the last week of the first trimester. Your baby now has exquisite fingerprints and is almost 3 inches long."),
   ];
 
-
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery
+    final itemHeight = MediaQuery
         .of(context)
-        .size;
-    final itemHeight = size.height * 0.8;
-    final itemWidth = size.width * 0.8;
+        .size
+        .height * 0.75;
+    final itemWidth = MediaQuery
+        .of(context)
+        .size
+        .width * 0.8;
+
     return Scaffold(
-        body: Center(
+      body: SafeArea(
+        child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
               height: itemHeight,
               child: ScrollSnapList(
-                itemBuilder: _buildListItem,
+                itemBuilder: (context, index) =>
+                    _buildListItem(context, index, itemWidth, itemHeight),
                 itemCount: productList.length,
                 itemSize: itemWidth,
                 onItemFocus: (index) {},
@@ -61,28 +66,23 @@ class _bbirth extends State<bbirth> {
               ),
             ),
           ),
-
-        ));
+        ),
+      ),
+    );
   }
 
-  Widget _buildListItem(BuildContext context, int index) {
-    final size = MediaQuery
-        .of(context)
-        .size;
-    final itemHeight = size.height * 0.8;
-    final itemWidth = size.width * 0.8;
+  Widget _buildListItem(BuildContext context, int index, double itemWidth,
+      double itemHeight) {
+    final product = productList[index];
 
-
-
-    Product product = productList[index];
     return SizedBox(
       width: itemWidth,
       height: itemHeight,
       child: Card(
         elevation: 12,
-        child: ClipRRect(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+        child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(20),
@@ -96,22 +96,24 @@ class _bbirth extends State<bbirth> {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    product.title,
-                    style: TextStyle(
-                        fontSize: itemWidth * 0.00001, fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
               Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Text(
-                  product.desc,
-                  style: TextStyle(
-                      fontSize: itemWidth * 0.080, fontWeight: FontWeight.normal),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      product.title,
+                      style: TextStyle(fontSize: itemWidth * 0.080,
+                          fontWeight: FontWeight.normal),
+                    ),
+                    const SizedBox(height: 10),
+                    Text(
+                      product.desc,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: itemWidth * 0.065,
+                          fontWeight: FontWeight.normal),
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -120,8 +122,4 @@ class _bbirth extends State<bbirth> {
       ),
     );
   }
-
-
 }
-
-
