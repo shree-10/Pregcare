@@ -9,14 +9,26 @@ class Mstore extends StatelessWidget {
       : storeItems = const [
           Store(
             productName: 'Prenatal vitamins',
-            productImage: "assets/images/store/m_clothing.png",
+            productImage: "assets/images/mS_prenatal.png",
             productLink:
                 'https://www.amazon.in/Prenatal-Vitamins/s?k=Prenatal+Vitamins',
           ),
           Store(
-            productName: 'Product 2',
-            productImage: 'assets/images/store/M_maternity_cloths.png',
+            productName: 'Maternity clothes',
+            productImage: "assets/images/mS_clothing.png",
             productLink: 'https://www.zivamoms.com/',
+          ),
+          Store(
+            productName: 'Comfortable shoes',
+            productImage: "assets/images/mS_foots.png",
+            productLink:
+                'https://www.shopsy.in/products-list/similar-products?screen=dynamic&pk=stores%3Dosp%2Fiko%2Fd20%2Fwar%2F~pIds%3DSHOGAW6EAZ2GSKFV~marketplace%3DFLIPKART~widgetType%3DproductCard~contentType%3DproductRecommendation%2Fsimilar&marketplace=FLIPKART',
+          ),
+          Store(
+            productName: 'Maternity clothes',
+            productImage: "assets/images/mS_breastPump.png",
+            productLink:
+                'https://www.firstcry.com/buddsbuddy/buddsbuddy-dura-plus-silicone-manual-breast-pump-with-feeding-nipple-gentle-and-easy-to-operate-bpa-free-multicolor/12699996/product-detail?ref=GoogleShopping_2_37!!Search_Standard-Shopping-Upto6-Months_New!!',
           ),
           // Add more products here
         ],

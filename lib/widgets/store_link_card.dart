@@ -25,15 +25,25 @@ class ProductList extends StatelessWidget {
         return Card(
           child: Column(
             children: [
+              Center(),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+              ),
               Ink.image(
                 image: AssetImage(storeItems[index].productImage),
-                height: 50,
-                width: 50,
+                height: 100,
+                width: 100,
                 fit: BoxFit.cover,
               ),
               Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(storeItems[index].productName),
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  storeItems[index].productName,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               ElevatedButton(
                 onPressed: () {
