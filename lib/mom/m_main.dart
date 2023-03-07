@@ -39,7 +39,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Experiances",
         image_url: "assets/images/m_experience.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momExperienceRoute),
   ];
 
   @override
