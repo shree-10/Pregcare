@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pregcare/mom/m_weight.dart';
-import 'package:pregcare/mom/m_store.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
 import 'mom/m_articles.dart';
 import 'mom/m_experience.dart';
+import 'mom/m_store.dart';
 
 
 void main() {
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momArticleRoute: (context) => const ArticlesPage(),
         PregcareRoutes().momExperienceRoute: (context) => const ExperiencesPage(),
+        PregcareRoutes().momStoreRoute: (context) => const Mstore()
       },
     );
   }
