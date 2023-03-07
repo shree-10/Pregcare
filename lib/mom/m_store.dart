@@ -1,9 +1,24 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../widgets/store_link_card.dart';
 
 class Mstore extends StatelessWidget {
-  const Mstore({super.key});
+  final List<Store> storeItems = [
+    Store(
+      productName: 'Prenatal vitamins',
+      productImage: "assets/images/store/m_clothing.png",
+      productLink:
+          'https://www.amazon.in/Prenatal-Vitamins/s?k=Prenatal+Vitamins',
+    ),
+    Store(
+      productName: 'Product 2',
+      productImage: 'assets/images/store/M_maternity_cloths.png',
+      productLink: 'https://www.zivamoms.com/',
+    ),
+    // Add more products here
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -15,19 +30,7 @@ class Mstore extends StatelessWidget {
               fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
         ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Store(
-              url: "https://www.amazon.in/s?k=baby+diapers&ref=nb_sb_noss",
-              imageUrl: "assets/images/store/diaper_1.jpg",
-              text: ""),
-          Store(
-              url: "https://www.flipkart.in",
-              imageUrl: "assets/images/store/diaper_1.jpg",
-              text: "Baby Diapers"),
-        ],
-      ),
+      body: ProductList(storeItems: storeItems),
     );
   }
 }

@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
-        PregcareRoutes().momArticleRoute: (context) => ArticlesPage()
+        PregcareRoutes().momArticleRoute: (context) => ArticlesPage(),
+        PregcareRoutes().momStoreRoute: (context) => Mstore(),
       },
     );
   }
