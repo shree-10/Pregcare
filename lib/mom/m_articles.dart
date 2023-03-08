@@ -1,6 +1,7 @@
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
+
 
 
 class ArticlesPage extends StatefulWidget {
@@ -16,18 +17,35 @@ class _ArticlesPageState extends State<ArticlesPage> {
   List<Map<String, String>> articles = [
     {"title": "Pregnancy Health: Your Guide to Prenatal Vitamins",
       "source": "What to Expect",
-      "image": "https://blogscdn.thehut.net/app/uploads/sites/675/2020/03/your-guide-prenatal-vitamins_1583233156.png",
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
       "category": "Health"},
     {"title": "How to Sleep Comfortably While Pregnant",
       "source": "Healthline",
-      "image": "https://blogscdn.thehut.net/app/uploads/sites/675/2020/03/your-guide-prenatal-vitamins_1583233156.png",
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
       "category": "Sleep"
     },
     {"title": "5 Tips for Staying Active During Pregnancy",
       "source": "The Bump",
-      "image": "https://blogscdn.thehut.net/app/uploads/sites/675/2020/03/your-guide-prenatal-vitamins_1583233156.png",
-      "category": "Fitness"}
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "category": "Fitness"},
+    {"title": "The Benefits of Prenatal Yoga",
+      "source": "American Pregnancy Association",
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "category": "Fitness"},
+    {"title": "The Importance of a Balanced Diet During Pregnancy",
+      "source": "National Institute of Child Health and Human Development",
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "category": "Health"},
+    {"title": "How to Alleviate Back Pain During Pregnancy",
+      "source": "Mayo Clinic",
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "category": "Health"},
+    {"title": "Tips for Creating a Relaxing Sleep Environment During Pregnancy",
+      "source": "Sleep Foundation",
+      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "category": "Sleep"}
   ];
+
 
   List<String> categories = ["Health", "Sleep", "Fitness"];
 
@@ -41,6 +59,7 @@ class _ArticlesPageState extends State<ArticlesPage> {
           style: GoogleFonts.dancingScript(
               fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
         ),
+
         actions: [
           Row(
             children: [
@@ -62,20 +81,33 @@ class _ArticlesPageState extends State<ArticlesPage> {
         children: [
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Wrap(
-              spacing: 8.0,
-              runSpacing: 8.0,
-              children: categories.map((category) {
-                return ChoiceChip(
-                  label: Text(category),
-                  selected: selectedCategory == category,
-                  onSelected: (selected) {
-                    setState(() {
-                      selectedCategory = category;
-                    });
-                  },
-                );
-              }).toList(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Articles",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 8),
+                Wrap(
+                  spacing: 8.0,
+                  runSpacing: 8.0,
+                  children: categories.map((category) {
+                    return ChoiceChip(
+                      label: Text(category),
+                      selected: selectedCategory == category,
+                      onSelected: (selected) {
+                        setState(() {
+                          selectedCategory = category;
+                        });
+                      },
+                    );
+                  }).toList(),
+                ),
+              ],
             ),
           ),
           Expanded(
@@ -87,7 +119,7 @@ class _ArticlesPageState extends State<ArticlesPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Image.network(
+                        Image.asset(
                           articles[index]['image']!,
                           fit: BoxFit.cover,
                         ),
@@ -128,3 +160,7 @@ class _ArticlesPageState extends State<ArticlesPage> {
     );
   }
 }
+
+
+
+

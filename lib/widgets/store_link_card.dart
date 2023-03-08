@@ -1,56 +1,60 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Store extends StatelessWidget {
-  final String imageUrl;
-  final String url;
-  final String text;
+class Store {
+  final String productName;
+  final String productImage;
+  final String productLink;
 
   const Store(
-      {Key? key, required this.imageUrl, required this.url, required this.text})
-      : super(key: key);
+      {required this.productName,
+      required this.productImage,
+      required this.productLink});
+}
+
+class ProductList extends StatelessWidget {
+  final List<Store> storeItems;
+
+  ProductList({required this.storeItems});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              text,
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
+    return ListView.builder(
+      itemCount: storeItems.length,
+      itemBuilder: (context, index) {
+        return Card(
+          child: Column(
+            children: [
+              Center(),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
               ),
-            ),
-          ),
-          Image.network(
-            imageUrl,
-            height: 50,
-            width: 50,
-            fit: BoxFit.cover,
-          ),
-          Expanded(
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: ElevatedButton(
-                  onPressed: () async {
-                    if (await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Could not launch $url';
-                    }
-                  },
-                  child: Text('Buy Now'),
+              Ink.image(
+                image: AssetImage(storeItems[index].productImage),
+                height: 100,
+                width: 100,
+                fit: BoxFit.cover,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  storeItems[index].productName,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
+              ElevatedButton(
+                onPressed: () {
+                  launch(storeItems[index].productLink);
+                },
+                child: Text('Buy Now'),
+              ),
+            ],
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 }

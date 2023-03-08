@@ -77,8 +77,10 @@ class _MyToolsState extends State<MyTools> {
                       onTap: () {},
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [SizedBox(
-                            height: 20,),
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Center(),
                           Ink.image(
                             image: AssetImage('assets/images/location_t.png'),
@@ -87,7 +89,8 @@ class _MyToolsState extends State<MyTools> {
                             fit: BoxFit.cover,
                           ),
                           SizedBox(
-                            height: 20,),
+                            height: 20,
+                          ),
                           Text(
                             'Get Location',
                             textAlign: TextAlign.center,
@@ -119,8 +122,10 @@ class _MyToolsState extends State<MyTools> {
                       onTap: () {},
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [SizedBox(
-                            height: 20,),
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Center(),
                           Ink.image(
                             image: AssetImage('assets/images/doctor1.png'),
@@ -129,8 +134,7 @@ class _MyToolsState extends State<MyTools> {
                             fit: BoxFit.fitHeight,
                           ),
                           Center(
-                            child: 
-                            Text(
+                            child: Text(
                               'Consult with Doctor',
                               textAlign: TextAlign.center,
                               style: TextStyle(
@@ -167,8 +171,10 @@ class _MyToolsState extends State<MyTools> {
                       onTap: () {},
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
-                        children: [SizedBox(
-                            height: 20,),
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Center(),
                           Ink.image(
                             image: AssetImage('assets/images/m_calender.png'),
@@ -177,7 +183,8 @@ class _MyToolsState extends State<MyTools> {
                             fit: BoxFit.fitHeight,
                           ),
                           SizedBox(
-                            height: 20,),
+                            height: 20,
+                          ),
                           Text(
                             'Important Dates',
                             textAlign: TextAlign.center,
@@ -206,7 +213,8 @@ class _MyToolsState extends State<MyTools> {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           SizedBox(
-                            height: 20,),
+                            height: 20,
+                          ),
                           Ink.image(
                             image: AssetImage('assets/images/smart_watch.png'),
                             height: 100,
@@ -214,7 +222,8 @@ class _MyToolsState extends State<MyTools> {
                             fit: BoxFit.fitHeight,
                           ),
                           SizedBox(
-                            height: 20,),
+                            height: 20,
+                          ),
                           Text(
                             'Smart Watch',
                             textAlign: TextAlign.center,
