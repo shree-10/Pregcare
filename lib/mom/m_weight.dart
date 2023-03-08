@@ -1,21 +1,82 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class MWeight extends StatelessWidget {
-  const MWeight({super.key});
+class MWeight extends StatefulWidget {
+  @override
+  _MWeightState createState() => _MWeightState();
+}
+
+class _MWeightState extends State<MWeight> {
+  double _currentWeight = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+    _loadWeight();
+  }
+
+  _loadWeight() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      _currentWeight = prefs.getDouble('currentWeight') ?? 0.0;
+    });
+  }
+
+  _saveWeight(double newWeight) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setDouble('currentWeight', newWeight);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Track Weight")),
-      body: Column(
-        children: [
-          CircleAvatar(
-            backgroundImage: NetworkImage(
-              "https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?w=740&t=st=1677479813~exp=1677480413~hmac=6f2d5d3a3a82c3d3b8955430cb4e7eb1f703927e45a1b665022f48e367f4ea7a",
+      appBar: AppBar(
+        title: Text('Weight Tracker'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'Current Weight: $_currentWeight kg',
+              style: TextStyle(fontSize: 24.0),
             ),
-            radius: 60,
-          )
-        ],
+            SizedBox(height: 16.0),
+            ElevatedButton(
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    double newWeight = _currentWeight;
+                    return AlertDialog(
+                      title: Text('Enter new weight'),
+                      content: TextFormField(
+                        keyboardType: TextInputType.number,
+                        initialValue: _currentWeight.toString(),
+                        onChanged: (value) {
+                          newWeight = double.tryParse(value) ?? _currentWeight;
+                        },
+                      ),
+                      actions: [
+                        TextButton(
+                          onPressed: () {
+                            _saveWeight(newWeight);
+                            Navigator.of(context).pop();
+                            setState(() {
+                              _currentWeight = newWeight;
+                            });
+                          },
+                          child: Text('Save'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
+              child: Text('Update Weight'),
+            ),
+          ],
+        ),
       ),
     );
   }

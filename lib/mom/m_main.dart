@@ -1,10 +1,16 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pregcare/widgets/m_drawer.dart';
 import 'package:pregcare/utils/routes.dart';
 
+import '../auth/login_controller.dart';
 import '../widgets/cards.dart';
 
 class MMain extends StatelessWidget {
+  final controller = Get.put(LoginController());
+
   MMain({super.key});
 
   List cards = [
@@ -46,7 +52,7 @@ class MMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 238, 238, 238),
+        backgroundColor: const Color.fromARGB(255, 238, 238, 238),
         appBar: AppBar(
           backgroundColor: Colors.pink,
           title: Text(
@@ -67,32 +73,33 @@ class MMain extends StatelessWidget {
             )
           ],
         ),
-        drawer: Drawer(
-          backgroundColor: Colors.pink,
-        ),
+        drawer: MyDrawer(
+            email: FirebaseAuth.instance.currentUser!.email!,
+            avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
+            name: FirebaseAuth.instance.currentUser!.displayName!),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Text(
+                const Text(
                   "Weeks-80",
                   style: TextStyle(fontSize: 20),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
                   alignment: Alignment.center,
-                  child: Text(
+                  child: const Text(
                     "01 : 08 : 2023",
                     style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Column(
@@ -103,7 +110,7 @@ class MMain extends StatelessWidget {
                       mainAxisSpacing: 10.0,
                       shrinkWrap: true,
                       scrollDirection: Axis.vertical,
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       children: List.generate(
                         cards.length,
                         (index) {
