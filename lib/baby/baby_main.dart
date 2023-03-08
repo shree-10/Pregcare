@@ -1,5 +1,6 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pregcare/baby/bbirth.dart';
 import 'package:pregcare/baby/abirth.dart';
 
@@ -15,26 +16,36 @@ class Baby extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(70),
-          child: AppBar(
-            elevation: 0,
-            title: Padding(
-              padding: EdgeInsets.only(top: 15),
-              child: Text(
-                "Pregcare",
-                style: TextStyle(fontSize: 21),
-              ),
-            ),
+        appBar: AppBar(
+        backgroundColor: Colors.pink,
+        // center might be temporarily here
+        // You should remove center if you want to add the drawer in this page
+        title: Center(
+          child: Text(
+            "Preg Care",
+            style: GoogleFonts.dancingScript(
+                fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
           ),
-         ),
+        ),
+      ),
             body: Container(
              padding: const EdgeInsets.all(8.0),
-             color: Colors.pink[100],
+             color: Color.fromARGB(255, 238, 238, 238),
               child: ContainedTabBarView(
                      tabs: [
-                        Text('Befor Birth'),
-                        Text('After Birth'),
+                      Container(
+                      child: Text(
+                        'Before Birth',
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
+                      ),
+                        Container(
+                      child: Text(
+                        'After Birth',
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
+                      ), 
+                        
                       ],
                    views: [
                           bbirth(),

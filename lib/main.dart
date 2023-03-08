@@ -6,6 +6,9 @@ import 'package:pregcare/auth/login_controller.dart';
 import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
+import 'mom/m_articles.dart';
+import 'mom/m_experience.dart';
+import 'mom/m_store.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -33,8 +36,13 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => LoginController().handleAuthState(),
-        PregcareRoutes().homeRoute: (context) => Pregcare(),
+        PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
+        PregcareRoutes().momWeightRoute: (context) => MWeight(),
+        PregcareRoutes().momArticleRoute: (context) => const ArticlesPage(),
+        PregcareRoutes().momExperienceRoute: (context) =>
+            const ExperiencesPage(),
+        PregcareRoutes().momStoreRoute: (context) => const Mstore()
       },
     );
   }

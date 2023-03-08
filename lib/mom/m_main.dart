@@ -17,7 +17,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Meal Plan",
         image_url: "assets/images/m_meal.png",
-        openUrl: PregcareRoutes().momWeightRoute),
+        openUrl: "Hello"),
     MomTileCrad(
         title_text: "Exercise",
         image_url: "assets/images/m_exercise.png",
@@ -33,11 +33,11 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Store",
         image_url: "assets/images/m_store.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momStoreRoute),
     MomTileCrad(
         title_text: "Articles",
         image_url: "assets/images/m_articles.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momArticleRoute),
     MomTileCrad(
         title_text: "Contraction",
         image_url: "assets/images/m_contraction.png",
@@ -45,7 +45,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Experiances",
         image_url: "assets/images/m_experience.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momExperienceRoute),
   ];
 
   @override
@@ -85,8 +85,8 @@ class MMain extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
-                  "Weeks-80",
+                Text(
+                  "Weeks-40",
                   style: TextStyle(fontSize: 20),
                 ),
                 const SizedBox(

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
-
+import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 class MyTools extends StatefulWidget {
   const MyTools({super.key});
+
 
   @override
   State<MyTools> createState() => _MyToolsState();
@@ -12,8 +13,21 @@ class _MyToolsState extends State<MyTools> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 238, 238, 238),
+      appBar: AppBar(
+        backgroundColor: Colors.pink,
+        // center might be temporarily here
+        // You should remove center if you want to add the drawer in this page
+        title: Center(
+          child: Text(
+            "Preg Care",
+            style: GoogleFonts.dancingScript(
+                fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
-        // component 1-->Button
+        // component 1--> SOS Button
         child: Column(
           children: [
             Center(),
@@ -45,6 +59,8 @@ class _MyToolsState extends State<MyTools> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                ////////////////new continer 
+                
                 Container(
                   width:
                       150, // Container child widget will get this width value
@@ -52,7 +68,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.greenAccent[700],
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -62,23 +78,34 @@ class _MyToolsState extends State<MyTools> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Center(),
                           Ink.image(
-                            image: AssetImage('assets/images/location.png'),
+                            image: AssetImage('assets/images/location_t.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.cover,
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Text(
                             'Get Location',
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 20, color: Colors.black),
                           ),
+                          onPressed: () {
+                          —launchUniversalLinkIos( 'https: //youtube.com');
+                          },
+
                         ],
                       ),
                     ),
                   ),
                 ),
+                ////////////////new continer 
                 Container(
                   width:
                       150, // Container child widget will get this width value
@@ -86,7 +113,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.lightBlueAccent,
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -96,9 +123,12 @@ class _MyToolsState extends State<MyTools> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Center(),
                           Ink.image(
-                            image: AssetImage('assets/images/doctor.png'),
+                            image: AssetImage('assets/images/doctor1.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.fitHeight,
@@ -109,7 +139,7 @@ class _MyToolsState extends State<MyTools> {
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
-                                color: Colors.white,
+                                color: Colors.black,
                               ),
                             ),
                           ),
@@ -124,6 +154,7 @@ class _MyToolsState extends State<MyTools> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                ////////////////new continer 
                 Container(
                   width:
                       150, // Container child widget will get this width value
@@ -131,7 +162,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.amber[600],
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -141,12 +172,18 @@ class _MyToolsState extends State<MyTools> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Center(),
                           Ink.image(
-                            image: AssetImage('assets/images/calender.png'),
+                            image: AssetImage('assets/images/m_calender.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.fitHeight,
+                          ),
+                          SizedBox(
+                            height: 20,
                           ),
                           Text(
                             'Important Dates',
@@ -165,7 +202,7 @@ class _MyToolsState extends State<MyTools> {
                       225, // Container child widget will get this height value
                   padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
                   child: Material(
-                    color: Colors.amber[600],
+                    color: Colors.white,
                     elevation: 8,
                     borderRadius: BorderRadius.circular(26),
                     clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -175,14 +212,20 @@ class _MyToolsState extends State<MyTools> {
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
+                          SizedBox(
+                            height: 20,
+                          ),
                           Ink.image(
-                            image: AssetImage('assets/images/calender.png'),
+                            image: AssetImage('assets/images/smart_watch.png'),
                             height: 100,
                             width: 200,
                             fit: BoxFit.fitHeight,
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Text(
-                            'Replace New Tools',
+                            'Smart Watch',
                             textAlign: TextAlign.center,
                             style: TextStyle(fontSize: 20, color: Colors.black),
                           ),

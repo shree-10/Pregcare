@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pregcare/mom/m_main.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:pregcare/tools/tools_main.dart';
+import 'package:pregcare/profile/profile_main.dart';
 
 import '../baby/baby_main.dart';
 
@@ -18,7 +19,7 @@ class _PregcareState extends State<Pregcare> {
     Baby(),
     Text("bot"),
     MyTools(),
-    Text("profile"),
+    MyProfile(),
   ];
 
   var _currentIndex = 0;
