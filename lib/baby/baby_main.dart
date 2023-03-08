@@ -35,7 +35,7 @@ class Baby extends StatelessWidget {
                      tabs: [
                       Container(
                       child: Text(
-                        'Befor Birth',
+                        'Before Birth',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       ),
                       ),
