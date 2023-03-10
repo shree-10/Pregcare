@@ -15,7 +15,9 @@ class Store {
 class ProductList extends StatelessWidget {
   final List<Store> storeItems;
 
-  ProductList({required this.storeItems});
+  const ProductList({super.key, required this.storeItems});
+
+  get logger => null;
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +27,9 @@ class ProductList extends StatelessWidget {
         return Card(
           child: Column(
             children: [
-              Center(),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(10, 20, 10, 10),
+              const Center(),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(10, 20, 10, 10),
               ),
               Ink.image(
                 image: AssetImage(storeItems[index].productImage),
@@ -39,7 +41,7 @@ class ProductList extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Text(
                   storeItems[index].productName,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
@@ -47,9 +49,16 @@ class ProductList extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  launch(storeItems[index].productLink);
+                  String urlString = storeItems[index].productLink;
+                  Uri uri = Uri.parse(urlString);
+
+                  if (uri.scheme == 'http' || uri.scheme == 'https') {
+                    launchUrl(uri);
+                  } else {
+                    logger.severe('Unsupported URL scheme: ${uri.scheme}');
+                  }
                 },
-                child: Text('Buy Now'),
+                child: const Text('Buy Now'),
               ),
             ],
           ),

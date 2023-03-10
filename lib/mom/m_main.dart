@@ -21,7 +21,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Exercise",
         image_url: "assets/images/m_exercise.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().momExerciseRoute),
     MomTileCrad(
         title_text: "Weight",
         image_url: "assets/images/m_weight.png",
