@@ -15,36 +15,24 @@ class _abirth extends State<abirth> {
 
  List cards = [
     MomTileCrad(
-        title_text: "feeding",
-        image_url: "assets/images/m_meal.png",
+        title_text: "Feeding",
+        image_url: "assets/images/Breastfeeding.png",
         openUrl: PregcareRoutes().momWeightRoute),
     MomTileCrad(
-        title_text: "Exercise",
-        image_url: "assets/images/m_exercise.png",
+        title_text: "Sleep",
+        image_url: "assets/images/sleep.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Weight",
         image_url: "assets/images/m_weight.png",
         openUrl: PregcareRoutes().momWeightRoute),
     MomTileCrad(
-        title_text: "Calender",
-        image_url: "assets/images/m_calender.png",
+        title_text: "Vaccine",
+        image_url: "assets/images/vaccine.png",
         openUrl: "hello"),
     MomTileCrad(
         title_text: "Store",
         image_url: "assets/images/m_store.png",
-        openUrl: "hello"),
-    MomTileCrad(
-        title_text: "#",
-        image_url: "#",
-        openUrl: "hello"),
-    MomTileCrad(
-        title_text: "#",
-        image_url: "#",
-        openUrl: "hello"),
-    MomTileCrad(
-        title_text: "#",
-        image_url: "#",
         openUrl: "hello"),
   ];
    

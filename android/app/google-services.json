@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "188774072859",
+    "project_id": "pregcare-a9c60",
+    "storage_bucket": "pregcare-a9c60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188774072859:android:c47d6a9e7e08ea80606ebe",
+        "android_client_info": {
+          "package_name": "com.example.pregcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188774072859-8m65lc5keo2lg9vv3b8o776vpkb55bnp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pregcare",
+            "certificate_hash": "fc2fb1b780c546b93f02fcb338943ae420f82567"
+          }
+        },
+        {
+          "client_id": "188774072859-obaani71ij86ve89035rvjshvr95rg4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTEslH91KI0BJfT2U99bfz9KLuFuauark"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188774072859-obaani71ij86ve89035rvjshvr95rg4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
