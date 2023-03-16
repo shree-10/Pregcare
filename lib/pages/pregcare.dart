@@ -16,10 +16,10 @@ class Pregcare extends StatefulWidget {
 class _PregcareState extends State<Pregcare> {
   List pages = [
     MMain(),
-    Baby(),
-    Text("bot"),
-    MyTools(),
-    MyProfile(),
+    const Baby(),
+    const Text("bot"),
+    const MyTools(),
+    const MyProfile(),
   ];
 
   var _currentIndex = 0;
@@ -43,34 +43,34 @@ class _PregcareState extends State<Pregcare> {
                 items: [
                   /// Home
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.face),
-                    title: Text("Mom"),
+                    icon: const Icon(Icons.face),
+                    title: const Text("Mom"),
                     selectedColor: Colors.purple,
                   ),
 
                   /// Likes
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.child_care_rounded, size: 30),
-                    title: Text("Baby"),
+                    icon: const Icon(Icons.child_care_rounded, size: 30),
+                    title: const Text("Baby"),
                     selectedColor: Colors.red,
                   ),
 
                   /// Search
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.smart_toy_outlined),
-                    title: Text("Bot"),
+                    icon: const Icon(Icons.smart_toy_outlined),
+                    title: const Text("Bot"),
                     selectedColor: Colors.orange,
                   ),
 
                   /// Profile
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.business_center_outlined),
-                    title: Text("Tools"),
+                    icon: const Icon(Icons.business_center_outlined),
+                    title: const Text("Tools"),
                     selectedColor: Colors.teal,
                   ),
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.person_outline),
-                    title: Text("Profile"),
+                    icon: const Icon(Icons.person_outline),
+                    title: const Text("Profile"),
                     selectedColor: Colors.teal,
                   ),
                 ]),

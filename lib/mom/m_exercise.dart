@@ -7,11 +7,6 @@ class MExercise extends StatelessWidget {
 
   final List<Exercise> exerciseItems = [
     const Exercise(
-      exerciseType: "Full Body",
-      exerciseImage: "assets/images/love-g3bfe8f28e_1280.jpg",
-      videoLink: "https://youtu.be/ZZIl3ZwcyRg",
-    ),
-    const Exercise(
       exerciseType: "Upper Body",
       exerciseImage: "assets/images/mE_upperBody.png",
       videoLink: "https://youtu.be/cFB_YEuv520",
@@ -20,6 +15,11 @@ class MExercise extends StatelessWidget {
       exerciseType: "Lower Body",
       exerciseImage: "assets/images/mE_lowerBody.png",
       videoLink: "https://youtu.be/FQYKwG_tuBo",
+    ),
+    const Exercise(
+      exerciseType: "Full Body",
+      exerciseImage: "assets/images/hello.jpeg",
+      videoLink: "https://youtu.be/ZZIl3ZwcyRg",
     ),
     const Exercise(
       exerciseType: "Yoga",

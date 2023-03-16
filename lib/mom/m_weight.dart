@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MWeight extends StatefulWidget {
+  const MWeight({super.key});
+
   @override
   _MWeightState createState() => _MWeightState();
 }
@@ -31,7 +33,7 @@ class _MWeightState extends State<MWeight> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Weight Tracker'),
+        title: const Text('Weight Tracker'),
       ),
       body: Center(
         child: Column(
@@ -39,9 +41,9 @@ class _MWeightState extends State<MWeight> {
           children: <Widget>[
             Text(
               'Current Weight: $_currentWeight kg',
-              style: TextStyle(fontSize: 24.0),
+              style: const TextStyle(fontSize: 24.0),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
                 showDialog(
@@ -49,7 +51,7 @@ class _MWeightState extends State<MWeight> {
                   builder: (BuildContext context) {
                     double newWeight = _currentWeight;
                     return AlertDialog(
-                      title: Text('Enter new weight'),
+                      title: const Text('Enter new weight'),
                       content: TextFormField(
                         keyboardType: TextInputType.number,
                         initialValue: _currentWeight.toString(),
@@ -66,14 +68,14 @@ class _MWeightState extends State<MWeight> {
                               _currentWeight = newWeight;
                             });
                           },
-                          child: Text('Save'),
+                          child: const Text('Save'),
                         ),
                       ],
                     );
                   },
                 );
               },
-              child: Text('Update Weight'),
+              child: const Text('Update Weight'),
             ),
           ],
         ),

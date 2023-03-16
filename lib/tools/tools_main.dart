@@ -36,7 +36,7 @@ class _MyToolsState extends State<MyTools> {
         child: Column(
           children: [
             const Center(),
-            // component 1--> SOS Button
+//SOS Button
             Container(
               padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
               child: Material(
@@ -186,7 +186,7 @@ class _MyToolsState extends State<MyTools> {
                             const SizedBox(
                               height: 20,
                             ),
-                            const Center(),
+                            // const Center(),
                             Ink.image(
                               image: const AssetImage(
                                   'assets/images/m_calender.png'),
@@ -201,7 +201,7 @@ class _MyToolsState extends State<MyTools> {
                               'Important Dates',
                               textAlign: TextAlign.center,
                               style:
-                                  TextStyle(fontSize: 20, color: Colors.black),
+                                  TextStyle(fontSize: 18, color: Colors.black),
                             ),
                           ],
                         ),

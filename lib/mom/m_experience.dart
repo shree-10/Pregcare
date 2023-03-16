@@ -120,11 +120,13 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
   final List<Map<String, String>> experiencesList = [
     {
       "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "review": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "review":
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     },
     {
       "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "review": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
+      "review":
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
     },
   ];
 
@@ -135,7 +137,7 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.pink,
-        title: Text("Preg Care"),
+        title: const Text("Preg Care"),
       ),
       body: Stack(
         children: [
@@ -205,7 +207,7 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
                 return Container(
                   width: 12.0,
                   height: 12.0,
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                     vertical: 10.0,
                     horizontal: 2.0,
                   ),
