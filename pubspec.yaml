@@ -54,6 +54,7 @@ dependencies:
   firebase_core: ^2.7.1
   firebase_auth: ^4.2.10
   url_launcher: ^6.1.10
+  dialog_flowtter: ^0.3.3
   
 
 dev_dependencies:
@@ -81,7 +82,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-  #   - images/a_dot_ham.jpeg
+    - assets/dialog_flow_auth.json
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
