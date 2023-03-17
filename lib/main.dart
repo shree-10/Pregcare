@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:pregcare/auth/login.dart';
+import 'package:pregcare/auth/login.dart';
 import 'package:pregcare/auth/login_controller.dart';
 import 'package:pregcare/baby/b_store.dart';
 import 'package:pregcare/mom/m_weight.dart';
@@ -41,15 +41,21 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
+// comment these line to be able to view the app without firebase authentication
         // ignore: equal_keys_in_map
-        // "/": (context) => LoginController().handleAuthState(),
+        "/": (context) => LoginController().handleAuthState(),
+        // also comment app drawer in the m_main of mom page
+        // dont forget to uncomment these before doing commit or
+        // else firebase person will have to find out what's wrong
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momArticleRoute: (context) => const ArticlesPage(),
-        PregcareRoutes().momExperienceRoute: (context) => const ExperiencesPage(),
+        PregcareRoutes().momExperienceRoute: (context) =>
+            const ExperiencesPage(),
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
-        PregcareRoutes().momExerciseRoute: (context) => MExercise()
+        PregcareRoutes().momExerciseRoute: (context) => MExercise(),
+        PregcareRoutes().babyStoreRoute: (context) => const BStore(),
       },
     );
   }
