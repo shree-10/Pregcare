@@ -27,7 +27,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
                       ),
                       Text(
                         url.title,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 15, fontWeight: FontWeight.w700),
                       ),
                     ],
@@ -41,8 +41,8 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
             enableInfiniteScroll: true,
             reverse: false,
             autoPlay: true,
-            autoPlayInterval: Duration(seconds: 3),
-            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            autoPlayInterval: const Duration(seconds: 3),
+            autoPlayAnimationDuration: const Duration(milliseconds: 800),
             autoPlayCurve: Curves.fastOutSlowIn,
             enlargeCenterPage: true,
             onPageChanged: (index, reason) {
@@ -60,7 +60,7 @@ class _CarouselSliderWidgetState extends State<CarouselSliderWidget> {
             return Container(
               width: 8.0,
               height: 8.0,
-              margin: EdgeInsets.symmetric(horizontal: 4.0),
+              margin: const EdgeInsets.symmetric(horizontal: 4.0),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: _currentImageIndex == index ? Colors.pink : Colors.grey,

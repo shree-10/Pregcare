@@ -32,9 +32,9 @@ class LoginController {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: ((context, snapshot) {
           if (snapshot.hasData) {
-            return Pregcare();
+            return const Pregcare();
           } else {
-            return Login();
+            return const Login();
           }
         }));
   }
