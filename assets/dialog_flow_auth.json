@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pregcare-vcyo",
+  "private_key_id": "5c6726ec5ab835588fd30f62a7bd3d19ba5f9cc2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCm1La/TpC07Db4\nfjP6FSEIAxWJz7NvYoMjLqqFIUJLz4ArBbpbsQVTxL/Og8Pwmu/B3AfYrGhfxpII\nXWMIAg3p+dPKhrlU67Tegort1an/wnln4VhosuFC6oQvfdW4a8sa0KrHuCVAIDW8\nKmTR/um8jigrAsajXqPgUgj6suxZqgTT/gFAx/ADYkdijZHRRjBPRgZKbPFOfybN\n6EibX9Z1/tFLpXvQfvxtTO3KbM2nIbkLmHxKE7R4RYbtkz6Uj6TnLh2fJ3IPYU9L\nBC89VIDU2FrhdV4liSv5R1ny3kj2oSlmTzpgUmSIfZbO5/NSxjOpoWYEcsD1blYs\nnIOv2FpbAgMBAAECggEASzmZGZQkfeARPWUyrK5AUauKV7S29R+XgBK3wwXnLeXn\npf6UNGoSu934mvchL+m8+E3tn87F1YHlMS5izCaY/Yqv7B9pjBgoWzjDylBQskmP\nkr6yrasTFahHaF62Ms0wLOwwRZQL/+lGMY1wHpxx6pqzFAnRZbLz898pu1lYZ2ke\nqnJN2Fop7KN4KeVbFIoBr2NMOGTzApzOJ3z+FOmmpkNj3U52AgGYz8jl0A6OXJUg\nD4hSRVhf1i4Fq0Bl7AyrtpL7K4gwTRBflFZ4o6xIzH+eiZ9nmpDNNKAZCIKRIKOB\ntwLaf0Csn9LQzfT8Sn+OG9ZGEGisSXtlp2bbKcBbcQKBgQDdWfZjCN/a00QRRwp+\nUZoV+IxymeNhUlGzJn/l2F3r10N7MYaPAAAaaw1N0R3Q3mynsQuv/VKFrBkWSY5g\n4EA1qQwkvUVfLybpdira7t6y7Co+F98N5rN2MsTo2YYxzHtPpKzTDSfolScyEz4Y\nDv4UYWtqj7mhhyqhCd8lneXtyQKBgQDA8f6+nvYfgd4C++epj1fGgOwno4hhei6s\n3tURFEk1QKAZSly3Jt57At26WmH/w0wgnvDkVXbIkclI5H0HYwL8V+YqRjb49DvY\n+359SjLaSBLGrNx24fSUCb2I9dRNtrVBMlf3gIhU12voK37wGo5PDhiiBaGYw2GP\nHZboVbaJAwKBgDhFx6qTtf02mmZeDh/g9PBC+Mmlr7WtLNIDpp4zLGVpm2E1TQUL\ntfsBXid7Uz4nXa4gB12dZB5RiyssVgLw38IEkO7CI2G4ZgcSIID6GymXeoHApdct\n4E/bRk4ABuqgFnU/4yPgg1XQnV9QnweUwClEPv+fPE0BROgdz1oL00lpAoGAZf9H\nsNNtvugzShaKt8ssFqbOsIG1tfoWNJKzxgyYSst4FwaFjtjAYfz44+ulxMQkOVZs\nd/hqC8ttwdfv9Hi1+lopNY3av660+Jaynl8cFOJm8potDbeTSLMBfCagbdi5ZtbL\nQ+6xo1AiHiDoQNt5AXetM/GQJKacq0B0Jywwi6sCgYB5sMTOCo9RbnpH3dVdLv+b\nG5qXGBKdxW3btnLYE8y0cm0dxHegCwgNwl8Jc9d6z6TFrNPokCsdT/7g04LOp66Z\nFuDNWr5G/Ir4kjpxCjLIqyRsBLU2l/fXIrgVvszjjEBeJm8wvyyI2PaBpL3hGy/u\nmw7AI/vcfXPlIdylDDafow==\n-----END PRIVATE KEY-----\n",
+  "client_email": "kunal-patil@pregcare-vcyo.iam.gserviceaccount.com",
+  "client_id": "107851720710213940825",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kunal-patil%40pregcare-vcyo.iam.gserviceaccount.com"
+}
