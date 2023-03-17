@@ -5,6 +5,7 @@ import 'package:pregcare/tools/tools_main.dart';
 import 'package:pregcare/profile/profile_main.dart';
 
 import '../baby/baby_main.dart';
+import '../bot/bot_main.dart';
 
 class Pregcare extends StatefulWidget {
   const Pregcare({super.key});
@@ -17,7 +18,7 @@ class _PregcareState extends State<Pregcare> {
   List pages = [
     MMain(),
     Baby(),
-    Text("bot"),
+    BotPage(),
     MyTools(),
     MyProfile(),
   ];
@@ -80,3 +81,4 @@ class _PregcareState extends State<Pregcare> {
     );
   }
 }
+

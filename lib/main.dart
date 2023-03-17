@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pregcare/auth/login.dart';
+// import 'package:pregcare/auth/login.dart';
 import 'package:pregcare/auth/login_controller.dart';
 import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/pages/pregcare.dart';
@@ -47,15 +47,14 @@ class MyApp extends StatelessWidget {
         "/": (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
         // ignore: equal_keys_in_map
-        "/": (context) => LoginController().handleAuthState(),
+        // "/": (context) => LoginController().handleAuthState(),
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
         PregcareRoutes().momArticleRoute: (context) => const ArticlesPage(),
-        PregcareRoutes().momExperienceRoute: (context) =>
-            const ExperiencesPage(),
+        PregcareRoutes().momExperienceRoute: (context) => const ExperiencesPage(),
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
-        PregcareRoutes().momExerciseRoute: (context) => MExercise()
+        PregcareRoutes().momExerciseRoute: (context) =>  MExercise()
       },
     );
   }

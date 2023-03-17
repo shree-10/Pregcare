@@ -36,6 +36,12 @@ class _bbirthState extends State<bbirth> {
         "Your baby can curl those tiny toes and make sucking movements when you're 12 weeks pregnant. You may be having heartburn."),
     Product('assets/images/week_13.png', '13 Weeks Pregnent',
         "At 13 weeks pregnant, you're in the last week of the first trimester. Your baby now has exquisite fingerprints and is almost 3 inches long."),
+    Product('assets/images/week_39.png', '39 Weeks Pregnent',
+        "At 39 weeks pregnant, your baby is full term and waiting to greet the world! If your water breaks, call your healthcare provider."),
+    Product('assets/images/week_40.png', '40 Weeks Pregnent',
+        "At 40 weeks pregnant, your baby is the size of a small pumpkin! Don't worry if you're still pregnant - it's common to go past your due date."),
+    Product('assets/images/week_41.png', '41 Weeks Pregnent',
+        "At 41 weeks pregnant, you'll go into labor or be induced soon. Your baby should remain active right up until delivery."),
   ];
 
   @override
