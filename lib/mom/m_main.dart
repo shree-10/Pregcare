@@ -17,7 +17,7 @@ class MMain extends StatelessWidget {
     MomTileCrad(
         title_text: "Meal Plan",
         image_url: "assets/images/m_meal.png",
-        openUrl: "Hello"),
+        openUrl: PregcareRoutes().momMealRoute),
     MomTileCrad(
         title_text: "Exercise",
         image_url: "assets/images/m_exercise.png",
@@ -73,10 +73,10 @@ class MMain extends StatelessWidget {
             )
           ],
         ),
-        drawer: MyDrawer(
-            email: FirebaseAuth.instance.currentUser!.email!,
-            avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
-            name: FirebaseAuth.instance.currentUser!.displayName!),
+        // drawer: MyDrawer(
+        //      email: FirebaseAuth.instance.currentUser!.email!,
+        //     avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
+        //     name: FirebaseAuth.instance.currentUser!.displayName!),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),

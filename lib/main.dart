@@ -8,6 +8,7 @@ import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
 import 'mom/m_articles.dart';
 import 'mom/m_experience.dart';
+import 'mom/m_meal.dart';
 import 'mom/m_store.dart';
 import 'mom/m_exercise.dart';
 
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
         // ignore: equal_keys_in_map
-        "/": (context) => LoginController().handleAuthState(),
+        //"/": (context) => LoginController().handleAuthState(),
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momExperienceRoute: (context) =>
             const ExperiencesPage(),
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
-        PregcareRoutes().momExerciseRoute: (context) => MExercise()
+        PregcareRoutes().momExerciseRoute: (context) => MExercise(),
+         PregcareRoutes().momMealRoute: (context) => const MealPlan(),
       },
     );
   }
