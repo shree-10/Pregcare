@@ -136,8 +136,7 @@ packages:
       sha256: "2644a9e0965a7aa3deb09cb8ce4081db4450c178f472818c8cd34216a3070d7b"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< HEAD
-    version: "4.0.6"
+    version: "5.0.2"
   equatable:
     dependency: transitive
     description:
@@ -146,9 +145,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.5"
-=======
-    version: "5.0.2"
->>>>>>> 2e07ebaf6f20ea4fd7c7d4fdd11d8818192c2ed5
   fake_async:
     dependency: transitive
     description:
@@ -312,10 +308,9 @@ packages:
     dependency: transitive
     description:
       name: google_sign_in_web
-      sha256: "9f883b9b525297663510dfbbe8b04d39715aa0abba430851f501b7d1e4b0f465"
+      sha256: "824b42c0a0b01c062bf3b1d555432d84c8b1dd0c5bbf0773514e574f02be9f95"
       url: "https://pub.dev"
     source: hosted
-<<<<<<< HEAD
     version: "0.11.0+1"
   googleapis_auth:
     dependency: transitive
@@ -325,9 +320,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0"
-=======
-    version: "0.11.0+2"
->>>>>>> 2e07ebaf6f20ea4fd7c7d4fdd11d8818192c2ed5
   graphs:
     dependency: transitive
     description:
