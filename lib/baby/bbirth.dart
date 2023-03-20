@@ -10,7 +10,6 @@ class bbirth extends StatefulWidget {
 }
 
 class _bbirthState extends State<bbirth> {
-
   final List<Product> productList = [
     Product('assets/images/week_2.png', '2 Weeks Pregnent',
         "Ovulation may happen about two weeks after your last period began. If egg meets sperm, you're on your way to being pregnant."),
@@ -40,14 +39,8 @@ class _bbirthState extends State<bbirth> {
 
   @override
   Widget build(BuildContext context) {
-    final itemHeight = MediaQuery
-        .of(context)
-        .size
-        .height * 0.75;
-    final itemWidth = MediaQuery
-        .of(context)
-        .size
-        .width * 0.8;
+    final itemHeight = MediaQuery.of(context).size.height * 0.75;
+    final itemWidth = MediaQuery.of(context).size.width * 0.8;
 
     return Scaffold(
       body: SafeArea(
@@ -71,8 +64,8 @@ class _bbirthState extends State<bbirth> {
     );
   }
 
-  Widget _buildListItem(BuildContext context, int index, double itemWidth,
-      double itemHeight) {
+  Widget _buildListItem(
+      BuildContext context, int index, double itemWidth, double itemHeight) {
     final product = productList[index];
 
     return SizedBox(
@@ -80,17 +73,16 @@ class _bbirthState extends State<bbirth> {
       height: itemHeight,
       child: Card(
         elevation: 12,
-        child: Center(
+        child: Container(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(5), topRight: Radius.circular(5)),
                 child: Image.asset(
                   product.imagePath,
                   fit: BoxFit.cover,
-                  width: itemWidth * 0.75,
-                  height: itemHeight * 0.3,
                 ),
               ),
               const SizedBox(
@@ -103,14 +95,16 @@ class _bbirthState extends State<bbirth> {
                   children: [
                     Text(
                       product.title,
-                      style: TextStyle(fontSize: itemWidth * 0.080,
+                      style: TextStyle(
+                          fontSize: itemWidth * 0.080,
                           fontWeight: FontWeight.normal),
                     ),
                     const SizedBox(height: 10),
                     Text(
                       product.desc,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: itemWidth * 0.065,
+                      style: TextStyle(
+                          fontSize: itemWidth * 0.065,
                           fontWeight: FontWeight.normal),
                     ),
                   ],

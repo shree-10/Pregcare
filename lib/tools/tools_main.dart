@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pregcare/tools/sos.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyTools extends StatefulWidget {
@@ -39,7 +40,9 @@ class _MyToolsState extends State<MyTools> {
                 clipBehavior: Clip.antiAliasWithSaveLayer,
                 child: InkWell(
                   splashColor: Colors.black54,
-                  onTap: () {},
+                  onTap: () {
+                    SOS().sosFire(context);
+                  },
                   child: Ink.image(
                     image: const AssetImage('assets/images/redButton.png'),
                     height: 200,
@@ -241,9 +244,6 @@ class _MyToolsState extends State<MyTools> {
       ),
     );
   }
-
-
-
 }
 
 // Need to add this-->

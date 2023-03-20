@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pregcare/auth/login.dart';
 import 'package:pregcare/auth/login_controller.dart';
+import 'package:pregcare/mom/m_kick.dart';
 import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
@@ -44,9 +45,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => const Pregcare(),
+        // "/": (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
-        // ignore: equal_keys_in_map
+
         "/": (context) => LoginController().handleAuthState(),
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
@@ -55,7 +56,8 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momExperienceRoute: (context) =>
             const ExperiencesPage(),
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
-        PregcareRoutes().momExerciseRoute: (context) => MExercise()
+        PregcareRoutes().momExerciseRoute: (context) => MExercise(),
+        PregcareRoutes().momKickCountRoute: (context) => MKickCount(),
       },
     );
   }
