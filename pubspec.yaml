@@ -57,13 +57,15 @@ dependencies:
   flutter_sms: ^2.3.3
   flutter_phone_direct_caller: ^2.1.1
   flutter_native_splash: ^2.2.18
-
+  dialog_flowtter: ^0.3.3
 
 flutter_native_splash:
   image: assets/images/splash_logo.png
   color: "#f9f9f9"
   android_12: 
     image: assets/images/splash_logo.png
+ 
+  
 
 dev_dependencies:
   flutter_test:
