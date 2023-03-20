@@ -5,6 +5,7 @@ import 'package:pregcare/tools/tools_main.dart';
 import 'package:pregcare/profile/profile_main.dart';
 
 import '../baby/baby_main.dart';
+import '../bot/bot_main.dart';
 
 class Pregcare extends StatefulWidget {
   const Pregcare({super.key});
@@ -17,7 +18,7 @@ class _PregcareState extends State<Pregcare> {
   List pages = [
     MMain(),
     Baby(),
-    Text("bot"),
+    BotPage(),
     MyTools(),
     MyProfile(),
   ];
@@ -43,34 +44,34 @@ class _PregcareState extends State<Pregcare> {
                 items: [
                   /// Home
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.face),
-                    title: Text("Mom"),
+                    icon: const Icon(Icons.face),
+                    title: const Text("Mom"),
                     selectedColor: Colors.purple,
                   ),
 
                   /// Likes
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.child_care_rounded, size: 30),
-                    title: Text("Baby"),
+                    icon: const Icon(Icons.child_care_rounded, size: 30),
+                    title: const Text("Baby"),
                     selectedColor: Colors.red,
                   ),
 
                   /// Search
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.smart_toy_outlined),
-                    title: Text("Bot"),
+                    icon: const Icon(Icons.smart_toy_outlined),
+                    title: const Text("Bot"),
                     selectedColor: Colors.orange,
                   ),
 
                   /// Profile
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.business_center_outlined),
-                    title: Text("Tools"),
+                    icon: const Icon(Icons.business_center_outlined),
+                    title: const Text("Tools"),
                     selectedColor: Colors.teal,
                   ),
                   SalomonBottomBarItem(
-                    icon: Icon(Icons.person_outline),
-                    title: Text("Profile"),
+                    icon: const Icon(Icons.person_outline),
+                    title: const Text("Profile"),
                     selectedColor: Colors.teal,
                   ),
                 ]),
@@ -80,3 +81,4 @@ class _PregcareState extends State<Pregcare> {
     );
   }
 }
+

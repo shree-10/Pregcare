@@ -7,4 +7,5 @@ class PregcareRoutes {
   final String momStoreRoute = '/m_store';
   final String momExerciseRoute = '/m_excercise';
   final String momKickCountRoute = '/m_kick';
+  final String babyStoreRoute = '/b_store';
 }

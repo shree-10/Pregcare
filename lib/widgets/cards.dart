@@ -30,12 +30,13 @@ class MomTileCrad extends StatelessWidget {
                 fit: BoxFit.fill,
                 height: 100,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               Text(
                 title_text,
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
               )
             ],
           ),

@@ -12,9 +12,6 @@ import 'mom/m_experience.dart';
 import 'mom/m_store.dart';
 import 'mom/m_exercise.dart';
 
-// void main() {
-//   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -36,9 +33,6 @@ class MyApp extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           color: Colors.pinkAccent,
         ),
-        // appBarTheme:AppBarTheme(
-        //   color: Colors.pink,
-        // ),
         bottomSheetTheme: BottomSheetThemeData(
           backgroundColor: Colors.black.withOpacity(0),
         ),
@@ -49,9 +43,12 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momWeightRoute: (context) => MWeight(),
 
         "/": (context) => LoginController().handleAuthState(),
+        // also comment app drawer in the m_main of mom page
+        // dont forget to uncomment these before doing commit or
+        // else firebase person will have to find out what's wrong
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
-        PregcareRoutes().momWeightRoute: (context) => MWeight(),
-        PregcareRoutes().momWeightRoute: (context) => MWeight(),
+        PregcareRoutes().momWeightRoute: (context) => const MWeight(),
+        PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momArticleRoute: (context) => const ArticlesPage(),
         PregcareRoutes().momExperienceRoute: (context) =>
             const ExperiencesPage(),
