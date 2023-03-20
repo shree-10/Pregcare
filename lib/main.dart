@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:pregcare/auth/login.dart';
 import 'package:pregcare/auth/login_controller.dart';
 import 'package:pregcare/mom/m_kick.dart';
+import 'package:pregcare/baby/b_store.dart';
 import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
         PregcareRoutes().momExerciseRoute: (context) => MExercise(),
         PregcareRoutes().momKickCountRoute: (context) => MKickCount(),
+        PregcareRoutes().babyStoreRoute: (context) => const BStore(),
       },
     );
   }
