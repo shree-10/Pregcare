@@ -26,9 +26,9 @@ class _BotPageState extends State<BotPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            'PregCare Bot',
-            style: GoogleFonts.dancingScript(
-                fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
+          'PregCare Bot',
+          style: GoogleFonts.dancingScript(
+              fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
         ),
       ),
       body: Container(
@@ -42,9 +42,9 @@ class _BotPageState extends State<BotPage> {
                 children: [
                   Expanded(
                       child: TextField(
-                        controller: _controller,
-                        style: TextStyle(color: Colors.white),
-                      )),
+                    controller: _controller,
+                    style: TextStyle(color: Colors.white),
+                  )),
                   IconButton(
                       onPressed: () {
                         sendMessage(_controller.text);
