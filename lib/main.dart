@@ -7,6 +7,7 @@ import 'package:pregcare/baby/b_store.dart';
 import 'package:pregcare/mom/m_weight.dart';
 import 'package:pregcare/pages/pregcare.dart';
 import 'package:pregcare/utils/routes.dart';
+import 'baby/b_vaccine.dart';
 import 'mom/m_articles.dart';
 import 'mom/m_experience.dart';
 import 'mom/m_store.dart';
@@ -41,12 +42,9 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
-// comment these line to be able to view the app without firebase authentication
         // ignore: equal_keys_in_map
         "/": (context) => LoginController().handleAuthState(),
-        // also comment app drawer in the m_main of mom page
-        // dont forget to uncomment these before doing commit or
-        // else firebase person will have to find out what's wrong
+// comment the line above
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
@@ -56,6 +54,7 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
         PregcareRoutes().momExerciseRoute: (context) => MExercise(),
         PregcareRoutes().babyStoreRoute: (context) => const BStore(),
+        PregcareRoutes().babyVaccineRoute: (context) => const BVaccine(),
       },
     );
   }
