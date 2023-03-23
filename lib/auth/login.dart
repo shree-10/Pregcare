@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 60,
             ),
             Text(
@@ -39,11 +39,11 @@ class _LoginState extends State<Login> {
                   fontSize: 28,
                   color: Colors.pink),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             CarouselSliderWidget(features: imageUrls),
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
             Text(
@@ -51,9 +51,9 @@ class _LoginState extends State<Login> {
               style: GoogleFonts.openSans(
                   fontWeight: FontWeight.w600,
                   fontSize: 22,
-                  color: Color.fromARGB(255, 1, 1, 20)),
+                  color: const Color.fromARGB(255, 1, 1, 20)),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Padding(
@@ -66,7 +66,7 @@ class _LoginState extends State<Login> {
                 child: Container(
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.pink),
-                      borderRadius: BorderRadius.all(Radius.circular(5))),
+                      borderRadius: const BorderRadius.all(Radius.circular(5))),
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Row(
@@ -76,7 +76,7 @@ class _LoginState extends State<Login> {
                           'assets/images/google.png',
                           height: 25,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 15,
                         ),
                         Text(
@@ -84,7 +84,7 @@ class _LoginState extends State<Login> {
                           style: GoogleFonts.openSans(
                               fontWeight: FontWeight.w600,
                               fontSize: 18,
-                              color: Color.fromARGB(255, 1, 1, 20)),
+                              color: const Color.fromARGB(255, 1, 1, 20)),
                         ),
                       ],
                     ),
@@ -92,7 +92,7 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 150,
             ),
             Text(
@@ -100,7 +100,7 @@ class _LoginState extends State<Login> {
               style: GoogleFonts.openSans(
                   fontWeight: FontWeight.w400,
                   fontSize: 16,
-                  color: Color.fromARGB(255, 1, 1, 20)),
+                  color: const Color.fromARGB(255, 1, 1, 20)),
             ),
           ],
         ),

@@ -12,7 +12,7 @@ class _MyProfileState extends State<MyProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 238, 238, 238),
+      backgroundColor: const Color.fromARGB(255, 238, 238, 238),
       appBar: AppBar(
         backgroundColor: Colors.pink,
         // center might be temporarily here
@@ -28,9 +28,9 @@ class _MyProfileState extends State<MyProfile> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Center(),
+            const Center(),
             Container(
-              padding: EdgeInsets.fromLTRB(0, 50, 0, 0),
+              padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
               child: Material(
                 elevation: 5,
                 borderRadius: BorderRadius.circular(120),
@@ -39,7 +39,7 @@ class _MyProfileState extends State<MyProfile> {
                   splashColor: Colors.black54,
                   onTap: () {},
                   child: Ink.image(
-                    image: AssetImage('assets/images/profile_mom.png'),
+                    image: const AssetImage('assets/images/profile_mom.png'),
                     height: 215,
                     width: 215,
                     fit: BoxFit.cover,
@@ -62,14 +62,14 @@ class _MyProfileState extends State<MyProfile> {
               height: 50,
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  'Edit Profile',
-                  style: TextStyle(fontSize: 16, color: Colors.black87),
-                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.pinkAccent,
                   side: BorderSide.none,
-                  shape: StadiumBorder(),
+                  shape: const StadiumBorder(),
+                ),
+                child: const Text(
+                  'Edit Profile',
+                  style: TextStyle(fontSize: 16, color: Colors.black87),
                 ),
               ),
             ),
