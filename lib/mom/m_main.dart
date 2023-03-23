@@ -1,12 +1,19 @@
+import 'dart:convert';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pregcare/tools/sos.dart';
 import 'package:pregcare/widgets/m_drawer.dart';
 import 'package:pregcare/utils/routes.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_sms/flutter_sms.dart';
 import '../auth/login_controller.dart';
+import '../tools/sos_details.dart';
 import '../widgets/cards.dart';
+import 'package:http/http.dart' as http;
 
 class MMain extends StatelessWidget {
   final controller = Get.put(LoginController());
@@ -39,14 +46,26 @@ class MMain extends StatelessWidget {
         image_url: "assets/images/m_articles.png",
         openUrl: PregcareRoutes().momArticleRoute),
     MomTileCrad(
-        title_text: "Contraction",
-        image_url: "assets/images/m_contraction.png",
-        openUrl: "hello"),
+        title_text: "Kick Count",
+        image_url: "assets/images/kick_pink.png",
+        openUrl: PregcareRoutes().momKickCountRoute),
     MomTileCrad(
         title_text: "Experiances",
         image_url: "assets/images/m_experience.png",
         openUrl: PregcareRoutes().momExperienceRoute),
   ];
+
+  // void _sendSMS(String message, List<String> recipents) async {
+  //   try {
+  //     String _result = await sendSMS(message: message, recipients: recipents)
+  //         .catchError((onError) {
+  //       print(onError);
+  //     });
+  //     print(_result);
+  //   } catch (e) {
+  //     print(e);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +84,7 @@ class MMain extends StatelessWidget {
               children: [
                 IconButton(
                   onPressed: (() {
-                    print("hello");
+                    SOS().sosFire(context);
                   }),
                   icon: const Icon(Icons.sos_outlined),
                 ),
@@ -73,10 +92,11 @@ class MMain extends StatelessWidget {
             )
           ],
         ),
-        //  drawer: MyDrawer(
-        //       email: FirebaseAuth.instance.currentUser!.email!,
-        //       avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
-        //       name: FirebaseAuth.instance.currentUser!.displayName!),
+// comment this drawer
+        drawer: MyDrawer(
+            email: FirebaseAuth.instance.currentUser!.email!,
+            avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
+            name: FirebaseAuth.instance.currentUser!.displayName!),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),

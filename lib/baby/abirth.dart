@@ -27,7 +27,7 @@ class _abirth extends State<abirth> {
     MomTileCrad(
         title_text: "Vaccine",
         image_url: "assets/images/vaccine.png",
-        openUrl: "hello"),
+        openUrl: PregcareRoutes().babyVaccineRoute),
     MomTileCrad(
         title_text: "Store",
         image_url: "assets/images/m_store.png",
