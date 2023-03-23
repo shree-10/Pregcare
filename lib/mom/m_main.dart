@@ -73,10 +73,10 @@ class MMain extends StatelessWidget {
             )
           ],
         ),
-        // drawer: MyDrawer(
-        //      email: FirebaseAuth.instance.currentUser!.email!,
-        //     avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
-        //     name: FirebaseAuth.instance.currentUser!.displayName!),
+        //  drawer: MyDrawer(
+        //       email: FirebaseAuth.instance.currentUser!.email!,
+        //       avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
+        //       name: FirebaseAuth.instance.currentUser!.displayName!),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),

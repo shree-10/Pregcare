@@ -15,39 +15,229 @@ class _MealPlanState extends State<MealPlan> {
   String selectedCategory = "Monday";
 
   List<Map<String, String>> articles = [
-    {"title": "Pregnancy Health: Your Guide to Prenatal Vitamins",
-      "source": "What to Expect",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "category": "Monday"},
-    {"title": "How to Sleep Comfortably While Pregnant",
-      "source": "Healthline",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+    {"title": "Pre Breakfast Snack",
+      "source": "8-12 pieces of dry fruits including cashew nuts, almonds, and raisins.",
+      "image": "assets/images/PREBREAKFAST.png",
+      "category": "Monday"
+    },
+    {"title": "Morning Breakfast",
+      "source": "Moongdal chilla-3 +pudina/coconut chutney-2 tsp",
+      "image": "assets/images/T_DINNER.png",
+      "category": "Monday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Blueberry shake (1 cup)",
+      "image": "assets/images/morningsnak.png",
+      "category": "Monday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup Mutton biryani + Cucumber onion Raita (½ cup)",
+      "image": "assets/images/lunch.png",
+      "category": "Monday"
+    },
+    {"title": "Evening Snack",
+      "source": "Sweet potato salad (cooked with 200 gms of sweet potato, 1 pinch of chat masala, and 1 tsp lemon juice) +  light tea (1 cup)",
+      "image": "assets/images/afterlunch.png",
+      "category": "Monday"
+    },
+    {"title": "Dinner",
+      "source": "Wheat dosa 3 + ½ cup bitter gourd sabji ",
+      "image": "assets/images/dinner.png",
+      "category": "Monday"
+    },
+    ///////////////////monday
+    {"title": "Pre Breakfast Snack",
+      "source": "Homemade fruit juice with strawberries, pomegranate, guava, or oranges (1 glass)",
+      "image": "assets/images/T_PREBREAKFAST.png",
       "category": "Tuesday"
     },
-    {"title": "5 Tips for Staying Active During Pregnancy",
-      "source": "The Bump",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "category": "wensday"},
-    {"title": "The Benefits of Prenatal Yoga",
-      "source": "American Pregnancy Association",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "category": "thusday"},
-    {"title": "The Importance of a Balanced Diet During Pregnancy",
-      "source": "National Institute of Child Health and Human Development",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "category": "friday"},
-    {"title": "How to Alleviate Back Pain During Pregnancy",
-      "source": "Mayo Clinic",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "category": "sat"},
-    {"title": "Tips for Creating a Relaxing Sleep Environment During Pregnancy",
-      "source": "Sleep Foundation",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
-      "category": "sunday"}
+    {"title": "Morning Breakfast",
+      "source": "Wheat dosa-4 + Tomato sabji (½ cup)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Tuesday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Vegetable soup made with brocolli and garlic (1 bowl)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Tuesday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup rice + 1 piece of chicken + 1 cup broccoli sabji",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Tuesday"
+    },
+    {"title": "Evening Snack",
+      "source": "Mixed fruit salad made of mangoes, bananas, and berries of your choice (1 medium-sized plate)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Tuesday"
+    },
+    {"title": "Dinner",
+      "source": "Moongdal chilla-3 +pudina/coconut chutney-2 tsp",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Tuesday"
+    },
+    ////////tuesday
+    {"title": "Pre Breakfast Snack",
+      "source": "Banana milkshake (1 glass)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Wednesday"
+    },
+    {"title": "Morning Breakfast",
+      "source": "Veggie-rich sevai or upma (1 cup) + 2 medium-sized parathas",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Wednesday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Kaddu ka soup or pumpkin soup (1 bowl)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Wednesday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup Mutton biryani + Cucumber onion Raita (½ cup)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Wednesday"
+    },
+    {"title": "Evening Snack",
+      "source": "10-14 pieces of dry fruits",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Wednesday"
+    },
+    {"title": "Dinner",
+      "source": "Multigrain toast (2 in no.) with two sunny side up eggs",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Wednesday"
+    },
+    ///////Wednesday
+    {"title": "Pre Breakfast Snack",
+      "source": "Carrot juice (1 glass)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Thursday"
+    },
+    {"title": "Morning Breakfast",
+      "source": "Oatmeal (1 cup) + 2 boiled eggs",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Thursday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Banana milkshake (1 glass)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Thursday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup rice, 1 piece mutton + 1 bowl masoor daal",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Thursday"
+    },
+    {"title": "Evening Snack",
+      "source": "Mixed fruit salad made of mangoes, bananas, and berries of your choice (1 medium-sized plate)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Thursday"
+    },
+    {"title": "Dinner",
+      "source": "Veggie-rich poha (1 cup) + 2 moong dal chillas",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Thursday"
+    },
+    //Thursday
+    {"title": "Pre Breakfast Snack",
+      "source": "1 plain glass of milk",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Friday"
+    },
+    {"title": "Morning Breakfast",
+      "source": "Veggie-rich poha (1 cup) + 2 moong dal chillas",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Friday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Tamatar or tomato soup (1 bowl)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Friday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup chicken biryani + cucumber onion raita (½ cup)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Friday"
+    },
+    {"title": "Evening Snack",
+      "source": "Vegetable salad (1 plate) made with carrots, cucumber, and onions",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Friday"
+    },
+    {"title": "Dinner",
+      "source": "Multigrain toast (2 in no.) with two sunny side up eggs",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Friday"
+    },
+    //Friday
+    {"title": "Pre Breakfast Snack",
+      "source": "Banana milkshake (1 glass)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Saturday"
+    },
+    {"title": "Morning Breakfast",
+      "source": "Oatmeal (1 cup) + 2 boiled eggs",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Saturday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Kaddu or pumpkin soup (1 bowl)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Saturday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup rice, 1 piece mutton + 1 bowl masoor daal",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Saturday"
+    },
+    {"title": "Evening Snack",
+      "source": "10-14 pieces of dry fruits including cashew nuts, almonds, and raisins",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Saturday"
+    },
+    {"title": "Dinner",
+      "source": "Wheat dosa-4 + Tomato sabji (½ cup)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Saturday"
+    },
+    //Saturday
+    {"title": "Pre Breakfast Snack",
+      "source": "1 plain glass of milk",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Sunday"
+    },
+    {"title": "Morning Breakfast",
+      "source": "Veggie-rich sevai or upma (1 cup) + 2 medium-sized parathas",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Sunday"
+    },
+    {"title": "Mid Morning Snack",
+      "source": "Peach milkshake (1 glass)",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Sunday"
+    },
+    {"title": "Lunch",
+      "source": "1.5 cup vegetable khichdi + 1 piece chicken + 1 small bowl of dahi",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Sunday"
+    },
+   {"title": "Evening Snack",
+      "source": "1 medium-sized avocado with 1 spoon of peanut butter",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Sunday"
+    },
+    {"title": "Dinner",
+      "source": "Veggie-rich poha (1 cup) + 2 moong dal chillas",
+      "image": "assets/images/T_PREBREAKFAST.png",
+      "category": "Sunday"
+    },
+    //Sunday
   ];
 
 
-  List<String> categories = ["Monday", "Tuesday", "wensday", "thusday", "friday", "sat", "sunday",];
+  List<String> categories = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",];
+  
+
 
   @override
   Widget build(BuildContext context) {
@@ -91,7 +281,7 @@ class _MealPlanState extends State<MealPlan> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 8),
+                SizedBox(height: 2),
                 Wrap(
                   spacing: 8.0,
                   runSpacing: 8.0,

@@ -48,8 +48,7 @@ class MyApp extends StatelessWidget {
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momArticleRoute: (context) => const ArticlesPage(),
-        PregcareRoutes().momExperienceRoute: (context) =>
-            const ExperiencesPage(),
+        PregcareRoutes().momExperienceRoute: (context) => const ExperiencesPage(),
         PregcareRoutes().momStoreRoute: (context) => const Mstore(),
         PregcareRoutes().momExerciseRoute: (context) => MExercise(),
         PregcareRoutes().momMealRoute: (context) => const MealPlan(),
