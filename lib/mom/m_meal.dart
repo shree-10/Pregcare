@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MealPlan extends StatefulWidget {
@@ -61,32 +62,32 @@ class _MealPlanState extends State<MealPlan> {
     {
       "title": "Morning Breakfast",
       "source": "Wheat dosa-4 + Tomato sabji (½ cup)",
-      "image": "assets/images/T_PREBREAKFAST.png",
+      "image": "assets/images/morningsnak.png",
       "category": "Tuesday"
     },
     {
       "title": "Mid Morning Snack",
       "source": "Vegetable soup made with brocolli and garlic (1 bowl)",
-      "image": "assets/images/T_PREBREAKFAST.png",
+      "image": "assets/images/morningsnak.png",
       "category": "Tuesday"
     },
     {
       "title": "Lunch",
       "source": "1.5 cup rice + 1 piece of chicken + 1 cup broccoli sabji",
-      "image": "assets/images/T_PREBREAKFAST.png",
+      "image": "assets/images/T_LUNCH.png",
       "category": "Tuesday"
     },
     {
       "title": "Evening Snack",
       "source":
           "Mixed fruit salad made of mangoes, bananas, and berries of your choice (1 medium-sized plate)",
-      "image": "assets/images/T_PREBREAKFAST.png",
+      "image": "assets/images/T_EVENING.png",
       "category": "Tuesday"
     },
     {
       "title": "Dinner",
       "source": "Moongdal chilla-3 +pudina/coconut chutney-2 tsp",
-      "image": "assets/images/T_PREBREAKFAST.png",
+      "image": "assets/images/T_DINNER.png",
       "category": "Tuesday"
     },
     ////////tuesday
@@ -314,9 +315,6 @@ class _MealPlanState extends State<MealPlan> {
           )
         ],
       ),
-      drawer: const Drawer(
-        backgroundColor: Colors.pink,
-      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -333,20 +331,27 @@ class _MealPlanState extends State<MealPlan> {
                   ),
                 ),
                 const SizedBox(height: 2),
-                Wrap(
-                  spacing: 8.0,
-                  runSpacing: 8.0,
-                  children: categories.map((category) {
-                    return ChoiceChip(
-                      label: Text(category),
-                      selected: selectedCategory == category,
-                      onSelected: (selected) {
-                        setState(() {
-                          selectedCategory = category;
-                        });
-                      },
-                    );
-                  }).toList(),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: categories.map((category) {
+                      return Padding(
+                        padding: EdgeInsets.all(5),
+                        child: ChoiceChip(
+                          label: Text(category),
+                          selected: selectedCategory == category,
+                          onSelected: (selected) {
+                            setState(() {
+                              selectedCategory = category;
+                            });
+                          },
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
               ],
             ),
@@ -360,9 +365,13 @@ class _MealPlanState extends State<MealPlan> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        Image.asset(
-                          articles[index]['image']!,
-                          fit: BoxFit.cover,
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(10),
+                          child: Image.asset(
+                            articles[index]['image']!,
+                            fit: BoxFit.cover,
+                            height: 320,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.all(16.0),

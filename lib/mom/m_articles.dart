@@ -21,13 +21,13 @@ class _ArticlesPageState extends State<ArticlesPage> {
     {
       "title": "How to Sleep Comfortably While Pregnant",
       "source": "Healthline",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "image": "assets/images/mE_upperBody.png",
       "category": "Sleep"
     },
     {
       "title": "5 Tips for Staying Active During Pregnancy",
       "source": "The Bump",
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "image": "assets/images/mE_lowerBody.png",
       "category": "Fitness"
     },
     {
@@ -81,9 +81,6 @@ class _ArticlesPageState extends State<ArticlesPage> {
             ],
           )
         ],
-      ),
-      drawer: const Drawer(
-        backgroundColor: Colors.pink,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,

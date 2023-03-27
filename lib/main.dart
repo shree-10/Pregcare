@@ -42,10 +42,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",
       routes: {
-        "/": (context) => const Pregcare(),
+        // "/": (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         // ignore: equal_keys_in_map
-        //"/": (context) => LoginController().handleAuthState(),
+        "/": (context) => LoginController().handleAuthState(),
         PregcareRoutes().homeRoute: (context) => const Pregcare(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),
         PregcareRoutes().momWeightRoute: (context) => const MWeight(),

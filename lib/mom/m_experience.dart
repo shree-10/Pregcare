@@ -11,12 +11,12 @@ class ExperiencesPage extends StatefulWidget {
 class _ExperiencesPageState extends State<ExperiencesPage> {
   final List<Map<String, String>> experiencesList = [
     {
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "image": "assets/images/mE_upperBody.png",
       "review":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
     },
     {
-      "image": "assets/images/love-g3bfe8f28e_1280.jpg",
+      "image": "assets/images/mE_meditation.png",
       "review":
           "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.",
     },
@@ -27,10 +27,6 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.pink,
-        title: const Text("Preg Care"),
-      ),
       body: Stack(
         children: [
           PageView.builder(
@@ -57,7 +53,8 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(12.0, 20.0, 12.0, 50.0),
+                          padding:
+                              const EdgeInsets.fromLTRB(12.0, 20.0, 12.0, 50.0),
                           child: Text(
                             experiencesList[index]['review']!,
                             style: GoogleFonts.poppins(
@@ -70,7 +67,6 @@ class _ExperiencesPageState extends State<ExperiencesPage> {
                             overflow: TextOverflow.fade,
                           ),
                         ),
-
                       ],
                     ),
                   ),

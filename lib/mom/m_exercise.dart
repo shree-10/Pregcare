@@ -40,8 +40,8 @@ class MExercise extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           "Exercise",
-          style: GoogleFonts.montserrat(
-              fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
+          style: GoogleFonts.dancingScript(
+              fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
         ),
       ),
       body: ListView.builder(
