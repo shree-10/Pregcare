@@ -26,7 +26,7 @@ class _BotPageState extends State<BotPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'PregCare Bot',
+          'Bot',
           style: GoogleFonts.dancingScript(
               fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
         ),
@@ -37,11 +37,19 @@ class _BotPageState extends State<BotPage> {
             Expanded(child: MessagesScreen(messages: messages)),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              color: Colors.deepPurple,
+              color: Color.fromARGB(255, 31, 17, 55),
               child: Row(
                 children: [
                   Expanded(
                       child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "ask question",
+                        hintStyle: TextStyle(color: Colors.white),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.white))),
                     controller: _controller,
                     style: TextStyle(color: Colors.white),
                   )),
@@ -50,7 +58,10 @@ class _BotPageState extends State<BotPage> {
                         sendMessage(_controller.text);
                         _controller.clear();
                       },
-                      icon: Icon(Icons.send))
+                      icon: Icon(
+                        Icons.send,
+                        color: Colors.white,
+                      ))
                 ],
               ),
             )

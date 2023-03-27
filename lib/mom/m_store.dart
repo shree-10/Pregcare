@@ -30,6 +30,31 @@ class Mstore extends StatelessWidget {
             productLink:
                 'https://www.firstcry.com/buddsbuddy/buddsbuddy-dura-plus-silicone-manual-breast-pump-with-feeding-nipple-gentle-and-easy-to-operate-bpa-free-multicolor/12699996/product-detail?ref=GoogleShopping_2_37!!Search_Standard-Shopping-Upto6-Months_New!!',
           ),
+          Store(
+            productName: 'Comfortable shoes',
+            productImage: "assets/images/mS_foots.png",
+            productLink:
+                'https://www.shopsy.in/products-list/similar-products?screen=dynamic&pk=stores%3Dosp%2Fiko%2Fd20%2Fwar%2F~pIds%3DSHOGAW6EAZ2GSKFV~marketplace%3DFLIPKART~widgetType%3DproductCard~contentType%3DproductRecommendation%2Fsimilar&marketplace=FLIPKART',
+          ),
+          Store(
+            productName: 'Breast pumps',
+            productImage: "assets/images/mS_breastPump.jpg",
+            productLink:
+                'https://www.firstcry.com/buddsbuddy/buddsbuddy-dura-plus-silicone-manual-breast-pump-with-feeding-nipple-gentle-and-easy-to-operate-bpa-free-multicolor/12699996/product-detail?ref=GoogleShopping_2_37!!Search_Standard-Shopping-Upto6-Months_New!!',
+          ),
+
+          Store(
+            productName: 'Comfortable shoes',
+            productImage: "assets/images/mS_foots.png",
+            productLink:
+                'https://www.shopsy.in/products-list/similar-products?screen=dynamic&pk=stores%3Dosp%2Fiko%2Fd20%2Fwar%2F~pIds%3DSHOGAW6EAZ2GSKFV~marketplace%3DFLIPKART~widgetType%3DproductCard~contentType%3DproductRecommendation%2Fsimilar&marketplace=FLIPKART',
+          ),
+          Store(
+            productName: 'Breast pumps',
+            productImage: "assets/images/mS_breastPump.jpg",
+            productLink:
+                'https://www.firstcry.com/buddsbuddy/buddsbuddy-dura-plus-silicone-manual-breast-pump-with-feeding-nipple-gentle-and-easy-to-operate-bpa-free-multicolor/12699996/product-detail?ref=GoogleShopping_2_37!!Search_Standard-Shopping-Upto6-Months_New!!',
+          ),
           // Can add more products here
         ],
         super(key: key);
@@ -41,9 +66,9 @@ class Mstore extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Store",
-          style: GoogleFonts.montserrat(
-              fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white),
+          'Store',
+          style: GoogleFonts.dancingScript(
+              fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
         ),
       ),
       body: ProductList(storeItems: storeItems),

@@ -87,10 +87,10 @@ class _BVaccineState extends State<BVaccine> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Store",
-          style: GoogleFonts.montserrat(
-            fontWeight: FontWeight.bold,
-            fontSize: 25,
+          "Vaccine",
+          style: GoogleFonts.dancingScript(
+            fontWeight: FontWeight.w900,
+            fontSize: 28,
             color: Colors.white,
           ),
         ),
@@ -98,25 +98,12 @@ class _BVaccineState extends State<BVaccine> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            color: Colors.blueAccent[200],
-            child: const Center(
-              child: Text(
-                "Vaccines for Baby",
-                style: TextStyle(
-                  fontSize: 32,
-                  color: Colors.black87,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ),
           Expanded(
             child: ListView.builder(
               itemCount: _vaccines.length,
               itemBuilder: (BuildContext context, int index) {
                 Vaccine vaccine = _vaccines[index];
+                var colorVal = int.parse("${index}36");
                 return Card(
                   margin: const EdgeInsets.symmetric(
                     horizontal: 16.0,
@@ -126,7 +113,7 @@ class _BVaccineState extends State<BVaccine> {
                     borderRadius: BorderRadius.circular(16.0),
                   ),
                   elevation: 5.0,
-                  color: Colors.blueAccent[200],
+                  color: Color.fromARGB(255, colorVal, 255, 91),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Column(
@@ -147,6 +134,7 @@ class _BVaccineState extends State<BVaccine> {
                             vaccine.description,
                             style: const TextStyle(
                               fontSize: 18,
+                              color: Color.fromARGB(255, 8, 6, 31),
                             ),
                           ),
                         ),

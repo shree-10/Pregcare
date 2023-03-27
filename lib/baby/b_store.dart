@@ -23,7 +23,7 @@ class BStore extends StatelessWidget {
                 'https://www.amazon.in/Baby-Swaddle-Blanket/s?k=Baby+Swaddle+Blanket',
           ),
           Store(
-            productName: 'Baby lotion, shampoo, and soap',
+            productName: 'Baby lotion',
             productImage: "assets/images/bS_shampoo.png",
             productLink:
                 'https://www.flipkart.com/baby-care/baby-gift-sets-combo/baby-bath-hair-skin-care-combo/pr?sid=kyh%2Cutp%2Cbte',

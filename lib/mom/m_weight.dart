@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MWeight extends StatefulWidget {
   const MWeight({super.key});
@@ -33,7 +34,11 @@ class _MWeightState extends State<MWeight> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Weight Tracker'),
+        title: Text(
+          "Exercise",
+          style: GoogleFonts.dancingScript(
+              fontWeight: FontWeight.w900, fontSize: 28, color: Colors.white),
+        ),
       ),
       body: Center(
         child: Column(

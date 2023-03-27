@@ -30,42 +30,42 @@ class MMain extends StatelessWidget {
         image_url: "assets/images/m_exercise.png",
         openUrl: PregcareRoutes().momExerciseRoute),
     MomTileCrad(
+        title_text: "Kick Count",
+        image_url: "assets/images/kick_pink.png",
+        openUrl: PregcareRoutes().momKickCountRoute),
+    MomTileCrad(
+        title_text: "Store",
+        image_url: "assets/images/m_store.png",
+        openUrl: PregcareRoutes().momStoreRoute),
+    MomTileCrad(
+        title_text: "Experiances",
+        image_url: "assets/images/m_experience.png",
+        openUrl: PregcareRoutes().momExperienceRoute),
+    MomTileCrad(
         title_text: "Weight",
         image_url: "assets/images/m_weight.png",
         openUrl: PregcareRoutes().momWeightRoute),
     MomTileCrad(
         title_text: "Calender",
         image_url: "assets/images/m_calender.png",
-        openUrl: "hello"),
-    MomTileCrad(
-        title_text: "Store",
-        image_url: "assets/images/m_store.png",
-        openUrl: PregcareRoutes().momStoreRoute),
+        openUrl: PregcareRoutes().momArticleRoute),
     MomTileCrad(
         title_text: "Articles",
         image_url: "assets/images/m_articles.png",
         openUrl: PregcareRoutes().momArticleRoute),
-    MomTileCrad(
-        title_text: "Kick Count",
-        image_url: "assets/images/kick_pink.png",
-        openUrl: PregcareRoutes().momKickCountRoute),
-    MomTileCrad(
-        title_text: "Experiances",
-        image_url: "assets/images/m_experience.png",
-        openUrl: PregcareRoutes().momExperienceRoute),
   ];
 
-  // void _sendSMS(String message, List<String> recipents) async {
-  //   try {
-  //     String _result = await sendSMS(message: message, recipients: recipents)
-  //         .catchError((onError) {
-  //       print(onError);
-  //     });
-  //     print(_result);
-  //   } catch (e) {
-  //     print(e);
-  //   }
-  // }
+  void _sendSMS(String message, List<String> recipents) async {
+    try {
+      String _result = await sendSMS(message: message, recipients: recipents)
+          .catchError((onError) {
+        print(onError);
+      });
+      print(_result);
+    } catch (e) {
+      print(e);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -93,10 +93,10 @@ class MMain extends StatelessWidget {
           ],
         ),
 // comment this drawer
-        // drawer: MyDrawer(
-        //     email: FirebaseAuth.instance.currentUser!.email!,
-        //     avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
-        //     name: FirebaseAuth.instance.currentUser!.displayName!),
+        drawer: MyDrawer(
+            email: FirebaseAuth.instance.currentUser!.email!,
+            avtar_img: FirebaseAuth.instance.currentUser!.photoURL!,
+            name: FirebaseAuth.instance.currentUser!.displayName!),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
