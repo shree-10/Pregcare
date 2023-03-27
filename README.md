@@ -35,8 +35,11 @@ The objectives of the application are to provide personalized assistance and sup
 ## Sustainable Development Goals
 Following are the 5 SDG goals satisfied by our Pregcare application.
 
+- SDG 2: Zero Hunger: Pregcare app helps womens by providing Nutritional information and guidance it also provides Meal planning. 
+
 - SDG 3: Good Health and Well-being: The pregcare application aligns with this goal as it provides a platform for pregnant women to access information and tools to support their health and well-being during pregnancy.
 
+- SDG 4: Quality Education: The application gives the education to the mother by giving access to reliable information.
 
 - SDG 5: Gender Equality: The pregcare application aligns with this goal as it aims to provide support and information to women during pregnancy, which can help to reduce gender-based inequalities in healthcare.
 
