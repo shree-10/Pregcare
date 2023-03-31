@@ -1,3 +1,5 @@
+![thubnail](https://user-images.githubusercontent.com/86178940/229025608-588fb824-483c-4f7a-8462-ad63d2158ea9.png)
+
 # Pregcare
 
 ## Introduction 
