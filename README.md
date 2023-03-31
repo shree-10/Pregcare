@@ -1,6 +1,6 @@
-![thubnail](https://user-images.githubusercontent.com/86178940/229025608-588fb824-483c-4f7a-8462-ad63d2158ea9.png)
-
 # Pregcare
+
+![thubnail](https://user-images.githubusercontent.com/86178940/229025608-588fb824-483c-4f7a-8462-ad63d2158ea9.png)
 
 ## Introduction 
 Pregcare is a Flutter-based mobile application designed to provide assistance and guidance to expecting mothers and new parents. The application uses Google's Dialogflow for chatbot functionalities and Firebase for user authentication and database technologies. The purpose of the application is to provide a centralized platform for pregnant women and new parents to access vital information and tools related to pregnancy, childbirth, and child care.
